@@ -1,26 +1,42 @@
 #swaliha_59
-echo "enter the first number"
-read a
-echo "enter the second number"
-read b
-echo "choose the operation"
-read op
-case $op in
-1) r=$(( $a + $b ))
-   echo " result is $r";;
-2) r=$(( $a - $b ))
-   echo "result is $r";;
-3) r=$(( $a * $b ))
-   echo "result is $r";;
-4) if [ $b -ne 0 ]
- then
-   r=$(( $a / $b ))
-    echo "result is $r"
-    else
-    echo " division by zero not possible"
- fi ;;
-*) echo "invalid";;
-esac
- 
+while true
+do
+  echo "Enter the first number:"
+  read a
+  echo "Enter the second number:"
+  read b
+  echo "Choose the operation:"
+  echo "1 - Addition"
+  echo "2 - Subtraction"
+  echo "3 - Multiplication"
+  echo "4 - Division"
+  echo "5 - Exit"
+  read op
+
+  case $op in
+    1) r=$(( a + b ))
+       echo "Result is: $r";;
+    2) r=$(( a - b ))
+       echo "Result is: $r";;
+    3) r=$(( a * b ))
+       echo "Result is: $r";;
+    4) if [ $b -ne 0 ]; then
+         r=$(( a / b ))
+         echo "Result is: $r"
+       else
+         echo "Division by zero is not possible"
+       fi;;
+    5) echo "Exiting the program."
+       break;;
+    *) echo "Invalid option. Please try again.";;
+  esac
+  done
+
+
+
+
+
+
+
    
    
