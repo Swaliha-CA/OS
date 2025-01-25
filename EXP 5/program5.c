@@ -1,3 +1,4 @@
+//Swaliha_59
 #include<stdio.h>
 #include<sys/types.h>
 #include<string.h>
@@ -13,7 +14,8 @@ void main()
 		scanf("%s",wbuf);
 	        write(fd,wbuf,strlen(wbuf));
 	        close(fd);
-	        fd2=open("file.txt",O_RDWR);
+
+		fd2=open("file.txt",O_RDWR);
 	        printf("the contents are:");
 	        read(fd2,rbuf,100);
 	        printf("%s\n", rbuf);
