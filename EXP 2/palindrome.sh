@@ -1,3 +1,4 @@
+//Swaliha_59
 echo "enter the number"
 read a
 num=$a
