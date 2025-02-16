@@ -57,7 +57,7 @@ void main() {
         wt[i] = ct[i] - at[i];          
         tt[i] = wt[i] - bt[i];          
         avg_wt += wt[i];
-        avg_tat += tat[i];
+        avg_tt += tt[i];
     }
 
     printf("\nProcess\tAT\tBT\tCT\tTT\tWT\n");
