@@ -3,7 +3,7 @@
 void main() {
     int n, at[10], bt[10], rt[10], ct[10], tt[10], wt[10];
     int complete = 0, time = 0, shortest = -1, min_rt;
-    float avg_wt = 0, avg_tat = 0;
+    float avg_wt = 0, avg_tt = 0; 
 
     printf("Enter the number of processes: ");
     scanf("%d", &n);
@@ -52,10 +52,9 @@ void main() {
 
     printf("\n-------------------------------------------------\n");
 
-    
     for (int i = 0; i < n; i++) {
-        wt[i] = ct[i] - at[i];          
-        tt[i] = wt[i] - bt[i];          
+        wt[i] = ct[i] - at[i] - bt[i]; 
+        tt[i] = ct[i] - at[i];          
         avg_wt += wt[i];
         avg_tt += tt[i];
     }
