@@ -39,6 +39,7 @@ if(blocksize[j]>=processsize[i]){
   else{
   printf("Not,allocated"\n);
   }
+     
  }
 }
   
