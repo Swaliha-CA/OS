@@ -12,13 +12,13 @@ int main() {
     printf("Enter the number of frames: ");
     scanf("%d", &frames);
 
-    // Initialize the frame array with -1
+  
     for (i = 0; i < frames; i++)
         m[i] = -1;
 
     printf("\nThe page replacement process is....\n");
     for (i = 0; i < l; i++) {
-        exist = 0; // Reset exist for each page reference
+        exist = 0; 
         // Check if the page is already in one of the frames
         for (j = 0; j < frames; j++) {
             if (m[j] == str[i]) {
@@ -28,11 +28,11 @@ int main() {
         }
 
         if (exist == 0) { // Page fault
-            m[count % frames] = str[i]; // Replace the page
+            m[count % frames] = str[i]; 
             count++;
         }
 
-        // Print the current state of frames
+     
         for (k = 0; k < frames; k++)
             printf("%d\t", m[k]);
         
